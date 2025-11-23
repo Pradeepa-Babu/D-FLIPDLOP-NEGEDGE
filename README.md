@@ -1,8 +1,9 @@
 # D-FLIPDLOP-NEGEDGE
-
+DATE:23/11/2025
+NAME:PRADEEPA B
 **AIM:**
 
-To implement  D flipflop using verilog and validating their functionality using their functional tables
+To implement  D flipflop using verilog and validating their functionality using their functional  tables.
 
 **SOFTWARE REQUIRED:**
 
@@ -28,17 +29,39 @@ Next state of D flip-flop is always equal to data input, D for every positive tr
 
 **Procedure**
 
-/* write all the steps invloved */
+1.Type the program in Quartus software.
+2.Compile and run the program.
+3.Generate the RTL schematic and save the logic diagram.
+4.Create nodes for inputs and outputs to generate the timing diagram.
+5.For different input combinations generate the timing diagram.
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+/* Program for flipflops and verify its truth table in quartus using Verilog programming.
+__D-FLIP FLOP WITH NEGATIVE EDGE TRIGGER:__ 
+module d_ff_neg_edge (d, clk, rst, q); 
+  input d, clk, rst; 
+  output reg q; 
+ 
+  always @(negedge clk or posedge rst) begin 
+    if (rst) 
+      q <= 0; // Reset the flip-flop 
+    else 
+      q <= d; // D input is passed to Q on the negative clock edge 
+  end 
+endmodule
+
+
+Developed by: RegisterNumber:25017224
 */
 
 **RTL LOGIC FOR FLIPFLOPS**
+<img width="909" height="688" alt="D flipflop circuit" src="https://github.com/user-attachments/assets/232c5a66-f654-4514-95d1-b8a98e7b798c" />
 
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
+<img width="1282" height="235" alt="D flipflop wave" src="https://github.com/user-attachments/assets/3aa27e04-7dec-4ab7-8f05-31b432c8b085" />
 
 **RESULTS**
+Thus the D flipflop using verilog is implemented and their functionality using their functional tables is validated. 
